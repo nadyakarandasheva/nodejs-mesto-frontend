@@ -19,7 +19,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
-      'post-deploy': 'source ~/.nvm/nvm.sh && npm ci && npm run build',
+      'post-deploy': 'source ~/.nvm/nvm.sh && nvm use 16 && npm ci && npm run build && cp -a build/. /home/practicum-user/mesto-frontend/',
     },
   },
 };
